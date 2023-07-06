@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>website</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    
+    <h1>Welcome to my personal website</h1>
+    
+<div id="nav_bar">
+    <!--navigation bar with several link as attached references but for now using previous examples-->
+    <div class="navbar">
+        <ol>
+            <li>
+                <a href="latihan5.html">Inventory</a><br>
+            </li>
+            <li>
+                <a href="latihan4.html">Blog</a><br>
+            </li>
+            <li>
+                <a href="latihan1.html">Gallery</a><br>
+            </li>
+            <li>
+                <a href="latihan2.html">Product</a><br>
+            </li>
+            <li>
+                <a href="latihan3.html">Home</a><br>
+            </li>
+        </ol>
+    </div>
+</div>
+   
+        
+<div id="info_table">
+    </div class="upperbox">
+    <!--classifying as the upper portion of the web that displays the image, name and data in table form-->
+            <table>
+                <tbody>
+                    <tr>
+                        <td rowspan="5">
+                            <div class="profilepic">
+                                <img src="other files/logo.jpg" alt="Ini adalah teks alternatif" width="250" height="250" />
+                            </div>
+                        </td>
+                        <td colspan="6" rowspan="2" style="font-size: 23px;"><b>Luke Jonathan</b></td>
+                        <td class="hiddentable"><b>Availability</b></td>
+                        <td class="hiddentable">full time</td>
+                    </tr>
+                    <tr>
+                        <td><b>Age</b></td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" rowspan="2">Front End Designer</td>
+                            <td class="hiddentable"><b>Location</b></td>                      
+                        <td class="hiddentable">Jakarta</td>
+                    </tr>
+                    <tr>
+                        <td class="hiddentable"><b>Experience</b></td>                      
+                        <td class="hiddentable">2</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="imgbutton">
+                                <button class="button" href="#" onclick="show('popup')">Contact</button>
+
+                                <!-- This is what will be included inside the popup -->
+                                <div class="popup" id="popup">
+                                    <p>Luke Jonathan</p>
+                                    <p>Contact Info</p>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2">Linkedin</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><p><a href="linkedin.com/in/luke-jonathan-1415bb171"></a>linkedin.com/in/luke-jonathan-1415bb171</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">Phone</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">random</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">Email</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">luke.jonathan.chen@gmail.com</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a href="#" onclick="hide('popup')">Close</a>
+                                </div>
+                     
+                            </div>
+                        </td>
+                        <td colspan="2">
+                            <div class="imgbutton">
+                                <button class="button">
+                                    <a href="other files/Luke Jonathan new CV updated.pdf" download="Luke Jonathan new CV updated.pdf">Resume</a>
+                                </button>
+                                
+                            </div>
+                        </td>
+                        <td colspan="2"></td>
+                        <td class="hiddentable"><b>Email</b></td>                   
+                        <td class="hiddentable">luke.jonathan.chen@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>  
+</div>  
+
+<br>
+<br>
+
+<br>
+
+    <div class="lowerbox">
+        <div class="editform">
+            <!--edit button for the form to show and hide it-->
+            <button id="btn">Hide form</button>
+            <script src="finalproject.js"></script>
+
+            <br>
+
+            <form id="form">
+                <!--the form content-->
+                <label for="nama">Nama</label><br>
+                <input type="text" style="min-width: 100%" name="nama" value="Luke Jonathan"><br>
+                <label for="alamat">Alamat</label><br>
+                <textarea name="alamat" style="min-width: 100%"></textarea><br>
+                <label for="role">Role</label><br>
+                <textarea name="role" style="min-width: 100%"></textarea><br>
+                <label for="avail">Availability</label><br>
+                <textarea name="avail" style="min-width: 100%"></textarea><br>
+                <label for="age">Usia</label><br>
+                <textarea name="age" style="min-width: 100%"></textarea><br>
+                <label for="years">Years Experience</label><br>
+                <textarea name="years" style="min-width: 100%"></textarea><br>
+                <label for="email">Email</label><br>
+                <textarea type=text style="min-width: 100%" name="email" value="@gmail.com"></textarea><br>
+        
+                <label for="kota">location</label><br>
+                <select name="kota">
+                    <option>Jakarta</option>
+                    <option>Bandung</option>
+                    <option>Tasikmalaya</option>
+                </select>
+
+                <div style="float: right">
+                    <!--the submit button after inputing data-->
+                    <input type="submit" value="Submit data">
+                </div>
+                    
+            </form>
+        </div>
+    </div>
+    
+        
+    
+
+</body>
+
+</html>
