@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Current Date and Time</title>
-    <script>
-      function updateDateTime() {
-        var currentDate = new Date();
-        var dateString = currentDate.toDateString();
-        var timeString = currentDate.toLocaleTimeString();
-        document.getElementById("date").innerHTML = dateString;
-        document.getElementById("time").innerHTML = timeString;
-      }
+<html lang="en">
+<head>
+    <title>Layout Pages</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      // Update the date and time every second
-      setInterval(updateDateTime, 1000);
-    </script>
-  </head>
-  <body>
-    <h1>Current Date and Time</h1>
-    <p>Date: <span id="date"></span></p>
-    <p>Time: <span id="time"></span></p>
-  </body>
-</html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="stylelayout.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <!-- Main content of your page goes here -->
+      </main>
+    </div>
+  </div>
+  
+</body>
