@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <style>
-    .custom-container {
-      border-radius: 20px; /* Adjust the border-radius value to control the curve */
-      overflow: hidden;
-    }
-  </style>
-  <title>Curved Container Example</title>
-</head>
-<body>
-  <div class="container custom-container">
-    <h1>Curved Container Example</h1>
-    <p>This is a curved container.</p>
-  </div>
-</body>
+<html>
+  <head>
+    <title>Current Date and Time</title>
+    <script>
+      function updateDateTime() {
+        var currentDate = new Date();
+        var dateString = currentDate.toDateString();
+        var timeString = currentDate.toLocaleTimeString();
+        document.getElementById("date").innerHTML = dateString;
+        document.getElementById("time").innerHTML = timeString;
+      }
+
+      // Update the date and time every second
+      setInterval(updateDateTime, 1000);
+    </script>
+  </head>
+  <body>
+    <h1>Current Date and Time</h1>
+    <p>Date: <span id="date"></span></p>
+    <p>Time: <span id="time"></span></p>
+  </body>
 </html>
