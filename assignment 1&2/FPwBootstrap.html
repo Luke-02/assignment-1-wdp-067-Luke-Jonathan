@@ -62,8 +62,11 @@
               <tr>
                   <td rowspan="5">
                       <div class="rounded-circle img-fluid">
-                          <img src="other files/logo.jpg" alt="Ini adalah teks alternatif" width="250" height="250" />
+                          <img id="profileImage" src="other files/logo.jpg" alt="Ini adalah teks alternatif" width="250" height="250" />
                       </div>
+                      <button id="editImageButton" class="btn btn-primary">Edit Image</button>
+                      <input id="imageInput" type="file" style="display: none;">
+
                   </td>
                   <td class="changeable" colspan="6" rowspan="2" style="font-size: 23px;"><b>Luke Jonathan</b></td>
                   <td><b>Availability</b></td>
@@ -97,8 +100,8 @@
                   </td>
                   <td colspan="2">
                       <div class="imgbutton">
-                          <button id="resumeButton" class="btn btn-danger">
-                              <a href="other files/Luke Jonathan new CV updated.pdf" download="Luke Jonathan new CV updated.pdf">Resume</a>
+                          <button id="resumeButton" class="btn btn-danger changeable-resume">
+                              <a class="resume-button-text" href="other files/Luke Jonathan new CV updated.pdf" download="Luke Jonathan new CV updated.pdf">Resume</a>
                           </button>
                       </div>
                   </td>
@@ -169,8 +172,23 @@
 </div>
 
 <script>
-  
+    $(document).ready(function() {
+        $('#editImageButton').click(function() {
+            $('#imageInput').click();
+        });
 
+        $('#imageInput').change(function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#profileImage').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(file);
+        });
+    });
+    
       // Update the table data when the form is submitted
       $('#myForm').submit(function(event) {
           event.preventDefault();
