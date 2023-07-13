@@ -108,3 +108,38 @@ body {
 .form-inline.my-2.my-lg-0 {
   margin-left: 10px;
 }
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 200px; /* Adjust the width as needed */
+  background-color: #333;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  display: block;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #111;
+}
+
+
+.sidebar a:hover {
+  background-color: #111;
+}
