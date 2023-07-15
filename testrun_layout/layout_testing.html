@@ -12,8 +12,55 @@
     <link href="stylelayout.css" rel="stylesheet">
 </head>
 <body>
-  
-  <nav class="sidebar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Your Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="latihan1.html">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="latihan2.html">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu" aria-labelledby="portfolioDropdown">
+              <a class="dropdown-item" href="FPwBootstrap.html">Portfolio</a>
+              <a class="dropdown-item" href="index.html">Curriculum Vitae</a>
+              <a class="dropdown-item" href="#">Project 3</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="latihan5.html">Inventory</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <form class="form-inline my-2 my-lg-0">
+              <div class="input-group">
+                <input class="form-control" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-light" id="searchButton" type="submit">Search</button>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav class="sidebar" style="padding-top: 70px;">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="#">Link 1</a>
@@ -35,4 +82,15 @@
     </div>
   </div>
   
+  <script>
+    document.getElementById("searchButton").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent form submission
+  
+  var searchTerm = document.getElementById("searchInput").value;
+  
+  // Perform the search action with the search term
+  // You can implement your own logic here, such as making an AJAX request to a server-side script to process the search or performing client-side filtering based on the search term.
+});
+
+  </script>
 </body>
