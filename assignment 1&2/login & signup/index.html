@@ -12,11 +12,21 @@
 <!-- Bootstrap JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<style>
+  /* Custom CSS for the container */
+  .login-container {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+</style>
+
 </head>
 <body>
   <div class="container h-100">
     <div class="row h-100 justify-content-center align-items-center">
-      <div class="col-md-6">
+      <div class="col-md-6 login-container">
         <ul class="nav nav-tabs">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#loginTab">Login</a>
@@ -29,35 +39,58 @@
         <div class="tab-content mt-3">
           <!-- Login Form -->
           <div class="tab-pane fade show active" id="loginTab">
-            <h2>Login</h2>
+            <h2 class="fw-bold mb-2 text-uppercase text-center">Login</h2>
+            <p>Please enter your login and password</p>
             <form id="loginForm">
               <!-- Login Form fields (same as before) -->
-              <div class="form-group">
+              <div class="form-outline mb-4">
                 <label for="loginEmail">Email:</label>
-                <input type="email" class="form-control" id="loginEmail" name="email" required>
+                <input type="email" placeholder="Email Address" class="form-control form-control-lg" id="loginEmail" name="email" required>
               </div>
-              <div class="form-group">
+              <div class="form-outline mb-4">
                 <label for="loginPassword">Password:</label>
-                <input type="password" class="form-control" id="loginPassword" name="password" required>
+                <input type="password" placeholder="Input your Password" class="form-control form-control-lg" id="loginPassword" name="password" required>
               </div>
-              <button type="submit" class="btn btn-primary">Login</button>
+              <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Remember Me</label>
+              </div>
+              <div class="form-outline mb-4 d-grid gap-2">
+                <button type="submit" class="btn btn-info d-flex justify-content-center w-100">Login </button>
+                <p class="mb-2">Don't have an account? <a class="text-white-50 fw-bold signup-link" href="#signupTab">Sign up</a></p>
+              </div>
             </form>
           </div>
 
           <!-- Sign-up Form -->
           <div class="tab-pane fade" id="signupTab">
-            <h2>Sign Up</h2>
+            <h2 class="fw-bold mb-2 text-uppercase text-center">Sign Up</h2>
+            <p>Please enter your Sign up email and set your password</p>
             <form id="signupForm">
               <!-- Sign-up Form fields (same as before) -->
-              <div class="form-group">
+              <div class="form-outline mb-4">
+                <label for="signupName">Name:</label>
+                <input type="name" placeholder="Enter your Name" class="form-control form-control-lg" id="signupName" name="name" required>
+              </div>
+              <div class="form-outline mb-4">
                 <label for="signupEmail">Email:</label>
-                <input type="email" class="form-control" id="signupEmail" name="email" required>
+                <input type="email" placeholder="Email Address" class="form-control form-control-lg" id="signupEmail" name="email" required>
               </div>
-              <div class="form-group">
+              <div class="form-outline mb-4">
                 <label for="signupPassword">Password:</label>
-                <input type="password" class="form-control" id="signupPassword" name="password" required>
+                <input type="password" placeholder="Input your Password" class="form-control form-control-lg" id="signupPassword" name="password" required>
               </div>
-              <button type="submit" class="btn btn-primary">Sign Up</button>
+              <div class="form-outline mb-4">
+                <label for="repeatPassword">Repeat Password:</label>
+                <input type="password" placeholder="Repeat your Password" class="form-control form-control-lg" id="repeatPassword" name="repeatpassword" required>
+              </div>
+              <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="agreetos">
+                <label class="form-check-label" for="agreetos">I Agree to <a href="https://www.example.com/terms" target="_blank">Terms of Service</a></label>
+              </div>
+              <div class="form-outline mb-4 d-grid gap-2">
+                <button type="submit" class="btn btn-info d-flex justify-content-center w-100">Sign Up </button>
+              </div>
             </form>
           </div>
         </div>
@@ -86,7 +119,23 @@
         // Implement your sign-up logic here
         console.log("Sign-up submitted:", email, password);
       });
+
+      // Add the click event listener to the "Sign up" link
+    $(".signup-link").click(function(event) {
+      event.preventDefault();
+      // Show the sign-up tab and hide the login tab
+      $("#loginTab").removeClass("show active");
+      $("#signupTab").addClass("show active");
     });
+
+    // Add the click event listener to the "Login" link in the sign-up form
+    $(".login-link").click(function(event) {
+      event.preventDefault();
+      // Show the login tab and hide the sign-up tab
+      $("#signupTab").removeClass("show active");
+      $("#loginTab").addClass("show active");
+    });
+  });
   </script>
 </body>
 </html>
