@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Sign-up Form</title>
+  <!-- Add Bootstrap and jQuery links here -->
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-md-6">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#loginTab">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#signupTab">Sign Up</a>
+          </li>
+        </ul>
+
+        <div class="tab-content mt-3">
+          <!-- Login Form -->
+          <div class="tab-pane fade show active" id="loginTab">
+            <h2>Login</h2>
+            <form id="loginForm">
+              <!-- Login Form fields (same as before) -->
+              <div class="form-group">
+                <label for="loginEmail">Email:</label>
+                <input type="email" class="form-control" id="loginEmail" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" class="form-control" id="loginPassword" name="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+
+          <!-- Sign-up Form -->
+          <div class="tab-pane fade" id="signupTab">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+              <!-- Sign-up Form fields (same as before) -->
+              <div class="form-group">
+                <label for="signupEmail">Email:</label>
+                <input type="email" class="form-control" id="signupEmail" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="signupPassword">Password:</label>
+                <input type="password" class="form-control" id="signupPassword" name="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // jQuery code for handling form submissions
+    $(document).ready(function() {
+      // Login Form Submit
+      $("#loginForm").submit(function(event) {
+        event.preventDefault();
+        var email = $("#loginEmail").val();
+        var password = $("#loginPassword").val();
+        // Implement your login logic here
+        console.log("Login submitted:", email, password);
+      });
+
+      // Sign-up Form Submit
+      $("#signupForm").submit(function(event) {
+        event.preventDefault();
+        var email = $("#signupEmail").val();
+        var password = $("#signupPassword").val();
+        // Implement your sign-up logic here
+        console.log("Sign-up submitted:", email, password);
+      });
+    });
+  </script>
+</body>
+</html>
