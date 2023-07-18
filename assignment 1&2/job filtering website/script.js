@@ -1,7 +1,8 @@
 // Sample job data (replace this with your actual data)
+// Sample job data (replace this with your actual data)
 let jobs = [
-    { title: "Software Engineer", location: "New York", company: "TechCo" },
-    { title: "Frontend Developer", location: "San Francisco", company: "WebDev Solutions" },
+    { title: "Software Engineer", location: "New York", company: "TechCo", description:"we are in need of software engineer right now." },
+    { title: "Frontend Developer", location: "San Francisco", company: "WebDev Solutions", description:"we are in need of a web developer right now." },
     // Add more jobs here
 ];
 
@@ -11,9 +12,16 @@ function displayJobs(jobsList) {
 
     jobsList.forEach((job) => {
         const listItem = document.createElement("li");
-        listItem.classList.add("jobItem");
+        listItem.classList.add("col-md-6", "col-lg-4"); // Bootstrap column classes
         listItem.innerHTML = `
-            <strong>${job.title}</strong> - ${job.company}, ${job.location}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">${job.title}</h5>
+                    <p class="card-text">${job.company}</p>
+                    <p class="card-text">${job.location}</p>
+                    <p class="card-text">${job.description}</p>
+                </div>
+            </div>
         `;
         jobList.appendChild(listItem);
     });
@@ -21,20 +29,26 @@ function displayJobs(jobsList) {
 
 function filterJobs() {
     const jobTitleInput = document.getElementById("jobTitle");
-    const filterTitle = jobTitleInput.value.toLowerCase();
+    const jobLocationInput = document.getElementById("jobLocation");
+    const jobCompanyInput = document.getElementById("jobCompany");
 
-    // Apply other filters based on your additional fields
+    const filterTitle = jobTitleInput.value.toLowerCase();
+    const filterLocation = jobLocationInput.value.toLowerCase();
+    const filterCompany = jobCompanyInput.value.toLowerCase();
 
     const filteredJobs = jobs.filter((job) =>
-        job.title.toLowerCase().includes(filterTitle)
+        job.title.toLowerCase().includes(filterTitle) &&
+        job.location.toLowerCase().includes(filterLocation) &&
+        job.company.toLowerCase().includes(filterCompany)
     );
 
     displayJobs(filteredJobs);
 }
 
 function resetFilters() {
-    const jobTitleInput = document.getElementById("jobTitle");
-    jobTitleInput.value = "";
+    document.getElementById("jobTitle").value = "";
+    document.getElementById("jobLocation").value = "";
+    document.getElementById("jobCompany").value = "";
 
     // Clear other filters as well
 
@@ -47,8 +61,9 @@ function addJob(event) {
     const newJobTitle = document.getElementById("newJobTitle").value;
     const newJobCompany = document.getElementById("newJobCompany").value;
     const newJobLocation = document.getElementById("newJobLocation").value;
+    const newJobDescription = document.getElementById("newJobDescription").value;
 
-    if (!newJobTitle || !newJobCompany || !newJobLocation) {
+    if (!newJobTitle || !newJobCompany || !newJobLocation || !newJobDescription) {
         alert("Please fill out all fields before adding a new job.");
         return;
     }
@@ -57,6 +72,7 @@ function addJob(event) {
         title: newJobTitle,
         company: newJobCompany,
         location: newJobLocation,
+        description: newJobDescription, // Added description field
     };
 
     jobs.push(newJob);

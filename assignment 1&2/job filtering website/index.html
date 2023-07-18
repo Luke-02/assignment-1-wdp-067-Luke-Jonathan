@@ -4,46 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Filtering Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="bg-dark text-white text-center py-3">
         <h1>Job Filtering Website</h1>
     </header>
-    <main>
+    <main class="container mt-4">
         <section>
             <h2>Filters</h2>
             <div class="filters">
-                <label for="jobTitle">Job Title:</label>
-                <input type="text" id="jobTitle">
+                <div class="form-group">
+                    <label for="jobTitle">Job Title:</label>
+                    <input type="text" id="jobTitle" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="jobLocation">Location:</label>
+                    <input type="text" id="jobLocation" class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label for="jobCompany">Company:</label>
+                    <input type="text" id="jobCompany" class="form-control">
+                </div>
 
                 <!-- Add more filters here (e.g., location, company, etc.) -->
 
-                <button onclick="filterJobs()">Filter</button>
-                <button onclick="resetFilters()">Reset</button>
+                <div class="form-group mt-2">
+                    <button onclick="filterJobs()" class="btn btn-primary">Filter</button>
+                    <button onclick="resetFilters()" class="btn btn-secondary">Reset</button>
+                </div>
             </div>
         </section>
 
         <section>
             <h2>Results</h2>
-            <ul id="jobList">
+            <div class="row" id="jobList">
                 <!-- Jobs will be dynamically populated here -->
-            </ul>
+            </div>
         </section>
 
         <section>
             <h2>Add a New Job</h2>
             <form id="addJobForm">
-                <label for="newJobTitle">Job Title:</label>
-                <input type="text" id="newJobTitle" required>
-
-                <label for="newJobCompany">Company:</label>
-                <input type="text" id="newJobCompany" required>
-
-                <label for="newJobLocation">Location:</label>
-                <input type="text" id="newJobLocation" required>
-
-                <button type="submit">Add Job</button>
+                <div class="form-group">
+                    <label for="newJobTitle">Job Title<span class="required">*</span>:</label>
+                    <input type="text" id="newJobTitle" required class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label for="newJobCompany">Company<span class="required">*</span>:</label>
+                    <input type="text" id="newJobCompany" required class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label for="newJobLocation">Location<span class="required">*</span>:</label>
+                    <input type="text" id="newJobLocation" required class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label for="newJobDescription">Description<span class="required">*</span>:</label>
+                    <textarea id="newJobDescription" required class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Job</button>
             </form>
         </section>
     </main>

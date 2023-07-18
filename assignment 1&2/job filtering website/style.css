@@ -29,8 +29,10 @@ section {
     margin: 5px;
 }
 
+/* Add custom styles here if needed */
+
+/* Adjustments for the Results section */
 #jobList {
-    list-style-type: none;
     padding: 0;
 }
 
@@ -39,4 +41,16 @@ section {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+}
+
+/* Adjustments for the Add a New Job section */
+#addJobForm {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Red color for the asterisk */
+form .required {
+    color: red !important;
+    margin-left: 5px;
 }
