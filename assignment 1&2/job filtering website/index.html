@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Filtering Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Job Filtering Website</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Filters</h2>
+            <div class="filters">
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle">
+
+                <!-- Add more filters here (e.g., location, company, etc.) -->
+
+                <button onclick="filterJobs()">Filter</button>
+                <button onclick="resetFilters()">Reset</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+            <ul id="jobList">
+                <!-- Jobs will be dynamically populated here -->
+            </ul>
+        </section>
+
+        <section>
+            <h2>Add a New Job</h2>
+            <form id="addJobForm">
+                <label for="newJobTitle">Job Title:</label>
+                <input type="text" id="newJobTitle" required>
+
+                <label for="newJobCompany">Company:</label>
+                <input type="text" id="newJobCompany" required>
+
+                <label for="newJobLocation">Location:</label>
+                <input type="text" id="newJobLocation" required>
+
+                <button type="submit">Add Job</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
