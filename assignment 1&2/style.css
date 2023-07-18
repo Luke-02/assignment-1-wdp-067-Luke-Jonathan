@@ -1,17 +1,18 @@
-.upperbox{
+.upperbox {
   margin: 0;
   padding: 75px;
   background-color: lightgray;
 }
 
-.lowerbox{
+.lowerbox {
   margin: 0;
   padding: 5px;
   background-color: blueviolet;
-  
 }
 
-table, th, td {
+table,
+th,
+td {
   border: none;
   width: 350px;
   height: 50px;
@@ -19,60 +20,61 @@ table, th, td {
   background-color: lightgray;
 }
 
-td, th {
-	padding: 3px;
-	width: 300px;
-	height: 25px;
+td,
+th {
+  padding: 3px;
+  width: 300px;
+  height: 25px;
 }
 
 .button {
-  background-color:crimson;
+  background-color: crimson;
   color: white;
   cursor: pointer;
   width: 150px;
 }
 
 img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-
 ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  li {
-      float: right;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
 
-  li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+li {
+  float: right;
+}
 
-  li a:hover {
-    background-color: #111;
-  }
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-  body {
-    background-color: cyan;
-  }
+li a:hover {
+  background-color: #111;
+}
 
-.head{
-    text-align: left;
-    float: center; 
+body {
+  background-color: cyan;
+}
+
+.head {
+  text-align: left;
+  float: center;
 }
 
 .row {
   display: flex;
-  margin-left:-5px;
-  margin-right:-5px;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 
 .column {
@@ -80,32 +82,64 @@ ol {
   padding: 5px;
 }
 
-.contactinfo{
+.contactinfo {
   text-align: center;
   width: 97.5%;
   padding-left: 15px;
   margin-left: 15px;
-  float: left;
   font-style: italic;
   background-color: lightgray;
 }
 
-.image{
-    float: left;
-
+.image {
+  float: left;
 }
 
-.popup {
-  display: none;
+/* Added CSS for the navigation bar */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav.ml-auto {
+  margin-left: auto;
+}
+
+.form-inline.my-2.my-lg-0 {
+  margin-left: 10px;
+}
+
+.sidebar {
   position: fixed;
-  padding: 10px;
-  width: 400px;
-  left: 50%;
-  margin-left: -150px;
-  height: 400px;
   top: 50%;
-  margin-top: -100px;
-  background: #FFF;
-  border: 3px solid #F04A49;
-  z-index: 20;
+  left: 0;
+  transform: translateY(-50%);
+  width: 200px; /* Adjust the width as needed */
+  background-color: #333;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  display: block;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #111;
+}
+
+
+.sidebar a:hover {
+  background-color: #111;
 }
