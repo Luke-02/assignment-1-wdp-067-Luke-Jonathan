@@ -1,4 +1,4 @@
-silahkan di buka aja folder 'assignment 1&2' karena itu bergabung tapi untuk folder yang lain silahkan di ignore saja karena itu hanya latihan dan beberapa file yang ke download dan pas di push untuk upload, itu tadi juga lupa di hapus dulu sebelum ke upload ke gitnya.
+silahkan di buka aja folder 'assignment 1&2' dan langsung ke main.html. saya tidak menggunakan index.html agar dapat membedakan beberapa file tertentu.
 
 apabila link yang di post tidak jalan, silahkan menggunakan link berikut:
 
