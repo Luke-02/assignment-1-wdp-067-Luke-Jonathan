@@ -61,5 +61,8 @@
 
             // Hide the form after updating the table
             $('#myForm').hide();
+
+            // Show an alert indicating the form was successfully submitted
+            alert("Form submission and data replacement was successful!");
         });
     });
