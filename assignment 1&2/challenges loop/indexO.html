@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of People</title>
+</head>
+<body>
+    <div id="peopleList">
+        <!-- The list of people will be displayed here -->
+    </div>
+
+    <div id="oShape">
+        <!-- The 'O' shape will be displayed here -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var peopleList = document.getElementById("peopleList");
+
+            for (var i = 1; i <= 20; i++) {
+                if (i % 2 === 1) {
+                    var personText = "Hello, I'm person " + i;
+                    var personParagraph = document.createElement("p");
+                    personParagraph.textContent = personText;
+                    peopleList.appendChild(personParagraph);
+                }
+            }
+
+            var oShape = document.getElementById("oShape");
+            var size = 100;
+
+            for (var i = 0; i < size; i++) {
+                var line = "";
+                for (var j = 0; j < size; j++) {
+                    if (i === 0 || i === size - 1 || j === 0 || j === size - 1 || i === j || i + j === size - 1) {
+                        line += "O";
+                    } else {
+                        line += "&nbsp;"; // Use non-breaking space to maintain spacing
+                    }
+                }
+                oShape.innerHTML += line + "<br>";
+            }
+        });
+    </script>
+</body>
+</html>
