@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>tailwind css project</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!--navigation bar with several link as attached references but for now using previous examples-->
+
+    <nav class="bg-black text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a class="text-white font-bold text-xl px-8" href="#">Your Logo</a>
+            <button class="lg:hidden flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+                <span class="sr-only">Open Menu</span>
+                <svg class="h-3 w-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path
+                        d="M0 2.5A2.5 2.5 0 015 0h10a2.5 2.5 0 110 5H5A2.5 2.5 0 010 2.5zm0 8A2.5 2.5 0 015 10h5a2.5 2.5 0 110 5H5A2.5 2.5 0 010 10zm0 8A2.5 2.5 0 015 18h10a2.5 2.5 0 110 5H5A2.5 2.5 0 010 18z" /></svg>
+            </button>
+            <div class="hidden lg:flex space-x-8">
+                <a class="text-white" href="index.html">Home</a>
+                <a class="text-white" href="latihan1.html">Product</a>
+                <a class="text-white" href="latihan2.html">Gallery</a>
+                <div class="relative">
+                    <a class="text-white" href="#">Blog</a>
+                    <button class="arrow-btn group-hover:block">
+                        <svg class="w-4 h-4 text-white transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <ul class="absolute hidden bg-black text-white py-2 space-y-1 group-hover:block">
+                        <li><a class="text-white" href="tailwindportofolio.html">Portfolio</a></li>
+                        <li><a class="text-white" href="index.html">Curriculum Vitae</a></li>
+                        <li><a class="text-white" href="#">Project 3</a></li>
+                    </ul>
+                </div>                                               
+                <a class="text-white" href="latihan5.html">Inventory</a>
+            </div>
+            <form class="hidden lg:flex items-center space-x-4">
+                <input class="bg-white rounded-l-full py-2 px-4 w-64 focus:outline-none focus:shadow-outline" type="search"
+                    placeholder="Search" aria-label="Search">
+                <button class="bg-blue-500 text-white rounded-r-full px-4 py-2" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+  <main class="pt-20">
+    <!-- Main menu content goes here -->
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold mb-4">
+        Yo! I'm Luke J.,
+        Welcome to my Personal Website
+      </h1>
+      <p class="mb-6">
+        Welcome to my corner of the web. I write, read and spend most of my time trying to learn something new. As of this moment, the current date and time is:
+        <p>Date: <span id="date"></span></p>
+        <p>Time: <span id="time"></span></p>
+      </p>
+      <h1 class="text-2xl font-bold mb-4">
+        Testing out my new web page
+      </h1>
+      <p>
+        just checking it out how awesome this future web will be
+      </p>
+    </div>
+  </main>
+
+  <div class="container mx-auto px-4 mt-4">
+    <h1 class="text-2xl font-bold mb-4">Interesting future Content coming up</h1>
+  </div>
+
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full md:w-1/3 px-4">
+        <a href="https://example.com">
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="other files/image1.jpg" class="rounded-lg mb-4" alt="Image 1">
+            <div>
+              <h5 class="text-lg font-bold">Image 1 Title (work in progress)</h5>
+              <p class="text-gray-600">Image 1 Description (work in progress)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="w-full md:w-1/3 px-4">
+        <a href="https://example.com">
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="other files/image2.jpg" class="rounded-lg mb-4" alt="Image 2">
+            <div>
+              <h5 class="text-lg font-bold">Image 2 Title (work in progress)</h5>
+              <p class="text-gray-600">Image 2 Description (work in progress)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="w-full md:w-1/3 px-4">
+        <a href="https://example.com">
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="other files/image3.jpg" class="rounded-lg mb-4" alt="Image 3">
+            <div>
+              <h5 class="text-lg font-bold">Image 3 Title (work in progress)</h5>
+              <p class="text-gray-600">Image 3 Description (work in progress)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script2.js"></script>
+  <!-- You don't need Bootstrap or jQuery for Tailwind CSS -->
+</body>
+
+</html>

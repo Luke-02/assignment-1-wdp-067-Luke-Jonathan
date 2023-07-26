@@ -3,7 +3,7 @@ body {
     background-color: cyan;
   }
   
-  img {
+.profileImage {
     border-radius: 50%;
   }
   
@@ -87,36 +87,6 @@ body {
     margin-left: 10px;
   }
   
-  /* Sidebar styles */
-  .sidebar {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 200px;
-    background-color: #333;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    display: block;
-  }
-  
-  .sidebar a {
-    display: block;
-    color: white;
-    padding: 12px;
-    text-decoration: none;
-  }
-  
-  .sidebar a:hover {
-    background-color: #111;
-  }
   
   /* Custom styles for specific elements */
   .head {
@@ -144,7 +114,25 @@ body {
     background-color: lightgray;
   }
   
-  .image {
-    float: left;
-  }
   
+  .arrow-btn {
+    position: relative;
+    top: 2px;
+    left: 32px;
+    transform: translateY(-120%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-btn svg {
+    transition: transform 0.3s ease;
+}
+
+/* This class will rotate the arrow icon when the dropdown is shown */
+.group-hover\:block:hover + .arrow-btn svg {
+    transform: rotate(180deg);
+}

@@ -1,12 +1,20 @@
 // Function to toggle the dropdown on hover
 const dropdown = document.querySelector(".relative");
+const dropdownMenu = dropdown.querySelector(".hidden");
+
 dropdown.addEventListener("mouseenter", () => {
-    const dropdownMenu = dropdown.querySelector(".hidden");
     dropdownMenu.classList.remove("hidden");
 });
-dropdown.addEventListener("mouseleave", () => {
-    const dropdownMenu = dropdown.querySelector(".group-hover\\:block");
+
+dropdownMenu.addEventListener("mouseleave", () => {
     dropdownMenu.classList.add("hidden");
+});
+
+dropdown.addEventListener("mouseleave", (event) => {
+    // Check if the mouse is leaving the .relative element or its children
+    if (!dropdown.contains(event.relatedTarget)) {
+        dropdownMenu.classList.add("hidden");
+    }
 });
 
 // Function to toggle the edit form
