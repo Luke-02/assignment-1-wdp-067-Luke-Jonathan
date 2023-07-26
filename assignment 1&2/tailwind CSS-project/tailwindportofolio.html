@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!--navigation bar with several link as attached references but for now using previous examples-->
+
+    <nav class="bg-black text-white py-4">
+        <div class="container mx-auto">
+            <div class="flex justify-between">
+                <a class="text-white font-bold text-xl px-8" href="#">Your Logo</a>
+                <button class="lg:hidden flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+                    <span class="sr-only">Open Menu</span>
+                    <svg class="h-3 w-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 2.5A2.5 2.5 0 015 0h10a2.5 2.5 0 110 5H5A2.5 2.5 0 010 2.5zm0 8A2.5 2.5 0 015 10h5a2.5 2.5 0 110 5H5A2.5 2.5 0 010 10zm0 8A2.5 2.5 0 015 18h10a2.5 2.5 0 110 5H5A2.5 2.5 0 010 18z"/></svg>
+                </button>
+                <div class="hidden lg:flex items-center" id="navbarContent">
+                    <ul class="flex space-x-4">
+                        <li><a class="text-white" href="main.html">Home</a></li>
+                        <li><a class="text-white" href="latihan1.html">Product</a></li>
+                        <li><a class="text-white" href="latihan2.html">Gallery</a></li>
+                        <li class="relative">
+                            <a class="text-white" href="#">Blog</a>
+                            <ul class="absolute hidden bg-black text-white py-2 space-y-1 group-hover:block">
+                                <li><a class="text-white" href="FPwBootstrap.html">Portfolio</a></li>
+                                <li><a class="text-white" href="index.html">Curriculum Vitae</a></li>
+                                <li><a class="text-white" href="#">Project 3</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a class="text-white" href="latihan5.html">Inventory</a></li>
+                    </ul>
+                    <form class="ml-auto flex items-center space-x-4">
+                        <div class="relative">
+                            <input class="bg-white rounded-l-full py-2 px-4 w-64 focus:outline-none focus:shadow-outline" type="search" placeholder="Search" aria-label="Search">
+                            <button class="bg-blue-500 text-white rounded-r-full px-4 py-2" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="pt-10 text-center font-bold text-xl">Portfolio</h1>
+
+    <div id="info_table" class="py-8">
+        <div class="container mx-auto">
+            <!-- Classifying as the upper portion of the web that displays the image, name and data in table form -->
+            <table class="table-auto w-full">
+                <tbody>
+                <tr>
+                    <td rowspan="5">
+                        <div class="rounded-circle img-fluid">
+                            <img id="profileImage" src="other files/logo.jpg" alt="Ini adalah teks alternatif" width="150" height="150" />
+                        </div>
+                        <button id="editImageButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Edit Image</button>
+                        <input id="imageInput" type="file" style="display: none;">
+                    </td>
+                    <td class="text-xl font-bold changeable" colspan="6" rowspan="2">Luke Jonathan</td>
+                    <td class="font-bold">Availability</td>
+                    <td class="changeable">full time</td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Age</td>
+                    <td class="changeable">23</td>
+                </tr>
+                <tr>
+                    <td class="changeable" colspan="6" rowspan="2">Front End Designer</td>
+                    <td class="font-bold">Location</td>
+                    <td class="changeable">Jakarta</td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Experience</td>
+                    <td class="changeable">2</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="imgbutton">
+                            <button id="editButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
+                        </div>
+                    </td>
+                    <td colspan="2">
+                        <div class="imgbutton">
+                            <button id="resumeButton" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                                <a class="resume-button-text" href="other files/Luke Jonathan new CV updated.pdf" download="Luke Jonathan new CV updated.pdf">Resume</a>
+                            </button>
+                        </div>
+                    </td>
+                    <td colspan="2">
+                        <button id="ContactButton" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Contact</button>
+                    </td>
+                    <td class="font-bold">Email</td>
+                    <td class="changeable">luke.jonathan.chen@gmail.com</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="lowerbox">
+        <div class="editform">
+            <div class="container mx-auto mt-5">
+                <form id="myForm" class="hidden">
+                    <!-- Form inputs will go here -->
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+                        <input type="text" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+                        <input type="email" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-4">
+                        <label for="address" class="block text-sm font-medium text-gray-700">Address:</label>
+                        <input type="address" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="address" placeholder="Enter your address">
+                    </div>
+                    <div class="mb-4">
+                        <label for="role" class="block text-sm font-medium text-gray-700">Role:</label>
+                        <input type="role" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="role" placeholder="Enter your role">
+                    </div>
+                    <div class="mb-4">
+                        <label for="availability" class="block text-sm font-medium text-gray-700">Availability:</label>
+                        <input type="availability" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="availability" placeholder="Enter your availability">
+                    </div>
+                    <div class="mb-4">
+                        <label for="age" class="block text-sm font-medium text-gray-700">Age:</label>
+                        <input type="text" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="age" placeholder="Enter your age" data-toggle="touchspin">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exp" class="block text-sm font-medium text-gray-700">Years Experience:</label>
+                        <select class="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="exp">
+                            <option value="">Select Years of Experience</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3-5">3-5</option>
+                            <option value="7-10">7-10</option>
+                            <option value="10+">10+</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="change_file" class="block text-sm font-medium text-gray-700">Select new Resume</label>
+                        <input type="file" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="change_file">
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+                        <!--the submit button will change data in the table and give out an alert-->
+                        <button type="button" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-4">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script2.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/4.3.0/jquery.bootstrap-touchspin.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+/* General styles */
+body {
+    background-color: cyan;
+  }
+  
+  img {
+    border-radius: 50%;
+  }
+  
+  /* Upperbox styles */
+  .upperbox {
+    margin: 0;
+    padding: 75px;
+    background-color: lightgray;
+  }
+  
+  /* Lowerbox styles */
+  .lowerbox {
+    margin: 0;
+    padding: 5px;
+    background-color: blueviolet;
+  }
+  
+  /* Table styles */
+  table,
+  th,
+  td {
+    border: none;
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    background-color: lightgray;
+  }
+  
+  td,
+  th {
+    padding: 3px;
+    width: 300px;
+    height: 25px;
+  }
+  
+  /* Button styles */
+  .button {
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+  }
+  
+  /* Navigation bar styles */
+  .navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav li {
+    margin-left: 10px;
+  }
+  
+  .navbar-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .navbar-nav a:hover {
+    background-color: #111;
+  }
+  
+  .form-inline.my-2.my-lg-0 {
+    margin-left: 10px;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 200px;
+    background-color: #333;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    display: block;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    background-color: #111;
+  }
+  
+  /* Custom styles for specific elements */
+  .head {
+    text-align: left;
+    float: center;
+  }
+  
+  .row {
+    display: flex;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 5px;
+  }
+  
+  .contactinfo {
+    text-align: center;
+    width: 97.5%;
+    padding-left: 15px;
+    margin-left: 15px;
+    font-style: italic;
+    background-color: lightgray;
+  }
+  
+  .image {
+    float: left;
+  }
+  
