@@ -26,8 +26,14 @@ $(document).ready(function() {
 
 // Function to handle changing the profile image
 $(document).ready(function() {
+    // Use a flag to prevent multiple image change triggers
+    let isChangingImage = false;
+
     $('#editImageButton').click(function() {
-        $('#imageInput').click();
+        if (!isChangingImage) {
+            isChangingImage = true;
+            $('#imageInput').click();
+        }
     });
 
     $('#imageInput').change(function(event) {
@@ -36,10 +42,12 @@ $(document).ready(function() {
 
         reader.onload = function(e) {
             $('#profileImage').attr('src', e.target.result);
+            isChangingImage = false; // Reset the flag after the image has been changed
         }
 
         reader.readAsDataURL(file);
     });
+
 
     // Update the table data when the form is submitted
     $('#myForm').submit(function(event) {
