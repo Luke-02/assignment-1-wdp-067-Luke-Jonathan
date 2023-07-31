@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HASH TECHIE OFFICIAL</title>
+</head>
+<body>
+    <section class="flex justify-center items-center min-h-screen w-full bg-cover bg-center" style="background-image: url('background6.jpg');">
+        <div class="form-box">
+            <div class="form-value">
+                <form id="loginForm">
+                    <h2 class="text-white text-2xl text-center">Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline" class="text-white"></ion-icon>
+                        <input type="email" id="email" required class="w-full bg-transparent border-b-2 border-white text-white py-2 pr-10 outline-none">
+                        <label for="email" class="absolute top-1/2 left-2 transform -translate-y-1/2 text-white text-sm pointer-events-none transition duration-500">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline" class="text-white"></ion-icon>
+                        <input type="password" id="password" required class="w-full bg-transparent border-b-2 border-white text-white py-2 pr-10 outline-none">
+                        <label for="password" class="absolute top-1/2 left-2 transform -translate-y-1/2 text-white text-sm pointer-events-none transition duration-500">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for="remember" class="text-white text-sm">
+                            <input type="checkbox" id="remember" class="mr-1">
+                            Remember Me
+                            <a href="#" class="text-white hover:underline">Forget Password</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="w-full h-10 rounded-full bg-white text-white font-semibold text-sm hover:bg-gray-300">Log in</button>
+                    <div class="register">
+                        <p class="text-white text-sm text-center mt-4">Don't have an account <a href="#" class="text-white font-semibold hover:underline">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
