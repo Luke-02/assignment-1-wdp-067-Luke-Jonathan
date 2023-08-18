@@ -87,6 +87,10 @@ body {
     margin-left: 10px;
   }
   
+  #openNav {
+    color: white; /* Change this to the desired color */
+  }
+
   
   /* Custom styles for specific elements */
   .head {

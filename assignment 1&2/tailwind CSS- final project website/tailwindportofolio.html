@@ -6,15 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large"
+        onclick="sidebar_close()">Close &times;</button>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+      </div>
+      
+      <div id="main">
+
     <!--navigation bar with several link as attached references but for now using previous examples-->
 
     <nav class="bg-black text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a class="text-white font-bold text-xl px-8" href="#">Your Logo</a>
+            <div class="flex items-center">
+                <button id="openNav" class="w3-button w3-xlarge" onclick="sidebar_open()">&#9776;</button>
+                <a class="text-white font-bold text-xl px-8" href="#">Your Logo</a>
+            </div>
             <button class="lg:hidden flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
                 <span class="sr-only">Open Menu</span>
                 <svg class="h-3 w-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path
@@ -157,7 +173,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <script src="script2.js"></script>
 
