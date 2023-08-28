@@ -1,4 +1,4 @@
-const API_KEY = '1b3822c15cmsh7670006c6ead67bp14baccjsnb7c04f1044de';
+const API_KEY = 'your_rapidapi_key';
 
 async function fetchCountries() {
   const url = 'https://covid-193.p.rapidapi.com/countries';
