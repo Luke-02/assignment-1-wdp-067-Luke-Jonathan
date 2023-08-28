@@ -7,9 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="data-container">
-        <!-- Data will be displayed here -->
+    <div class="center-heading">
+        <h1 class="styled-heading">COVID-19 Tracker</h1>
     </div>
-    <script src="script.js"></script>
+    
+    <div id="data-container">
+        <div class="dropdown">
+            <label for="country-select" style="font-size: 28px; color: white;">Select Country:</label>
+            <select id="country-select"></select>
+        </div>
+
+        <br>
+        
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Active Cases</th>
+                    <th>New Cases</th>
+                    <th>Recovered Cases</th>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                    <th>Total Tests</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
+<script src="script.js"></script>
 </body>
 </html>
